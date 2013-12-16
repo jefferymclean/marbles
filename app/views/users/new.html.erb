@@ -4,11 +4,11 @@
 <% if @user.errors.any? %>
   <div>
     <%= pluralize(@user.errors.count, "error") %> prevented the acct from being created: 
-    <ul>
+    <ol>
       <% @user.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
-    </ul>      
+    </ol>      
   </div>
 <% end %>
 <div>
