@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
+  before_filter :restrict_access, :only => [:index] 
 
   def index
-    
   end
 
 
