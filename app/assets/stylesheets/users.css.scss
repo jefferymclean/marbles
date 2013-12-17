@@ -23,6 +23,7 @@ h3, h4 {
 div {
   text-align: center; 
 }
+
 footer {
   text-align: center; 
   margin-top: 440px; 
@@ -39,23 +40,26 @@ footer {
 // }
 
 #container {
+  margin: auto;
   position: relative; 
   width: 200px; 
   height: 200px; 
   max-width: 100%; 
+  position: center;
 }
 #jar {
   background-image: asset-url("jar.png", image); 
-  display: block;
-  margin: 0 auto; 
-  max-width: 100%;
+  width: 200%; 
+  height: 200%; 
+
+  // display: block;
+  // margin: 0 auto; 
+  // max-width: 100%;
   background-repeat: no-repeat; 
   background-position: center; 
-  width: 200%;
-  height: 200%;
-  margin: auto; 
-  margin-left: 310px; 
-  margin-top: 150px;  
+
+  // margin-left: 310px; 
+  // margin-top: 150px;  
 }
 #firstmarble {
   background-image: asset-url("firstmarble.jpg", image); 
@@ -80,5 +84,8 @@ img {
   box-shadow: 10px 10px 5px #888888;
   width: 50%; 
   padding-bottom: 10px; 
-
+}
+#user-title {
+  font-family: impact; 
+  text-align: center; 
 }

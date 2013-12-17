@@ -6,22 +6,24 @@
   </title>
 </head>
 <body>
-  <h4>Your Marbles</h4>
+  <h2 id="user-title">Your Marbles</h2>
 
-
-<div id = "giveaway">  
+<div id="giveaway">  
   <h2>Give a Marble Away</h2>
-    <form action="____">
-      Recipient's Username: <input type="text" name="recipient username" size="35"><br>
-      <input type="submit" value="Submit">
-    </form>
+  <%= form_tag(send_marble_path, :method => :post) do %>
+    <p> Recipient's Username: </p>
+    <%= text_field_tag('username') %><br>
+    <input type="submit" value="Submit">
+  </form>
 </div>
 
   <div id="container">
     <div id="jar">
-     <div id="firstmarble">
-     </div>
+      <div id="firstmarble">
+      </div>
     </div>
   </div>
+
 </body>
 </html>
+<% end %>

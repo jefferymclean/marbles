@@ -1,6 +1,6 @@
 <h1>Welcome Back</h1>
 <h3>Log In</h3>
-<%= form_tag sessions_path do %>
+<%= form_tag session_path do %>
   <div>
     <%= label_tag "email" %><br/>
     <%= text_field_tag "email" %>
@@ -10,4 +10,5 @@
     <%= password_field_tag :password %>
   </div>
   <div><%= submit_tag "Log In" %></div>
-  <% end %>                                                                                                                                         
+  <% end %>
+                                                                                                                              
