@@ -9,7 +9,7 @@
   <h2 id="user-title">Your Marbles</h2>
 
 <div id="giveaway">  
-  <h2>Give a Marble Away</h2>
+  <h2>Give one of your <%= current_user.marbles %> Marbles Away</h2>
   <%= form_tag(send_marble_path, :method => :post) do %>
     <p> Recipient's Username: </p>
     <%= text_field_tag('username') %><br>
