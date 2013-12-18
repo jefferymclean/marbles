@@ -1,15 +1,22 @@
-<h2 id="user-title"></h2>
+<div class = "jar">
+  <h2 id="user-title"></h2>
 
-<div id="giveaway"> 
-  <h2>Give One of Your <%= current_user.marbles.to_words.capitalize %> Marbles Away</h2>
-  <%= form_tag(send_marble_path, :method => :post) do %>
-    <p> Recipient's Username: </p>
-    <%= text_field_tag('username') %><br>
-    <input type="submit" value="Submit">
+  <div id="giveaway"> 
+    <% if current_user.marbles == 0 %>
+      <h2> You don't have any marbles to give. </h2>
+    <% else %>
+      <h2>Give One of Your <%= current_user.marbles.to_words.capitalize %> Marbles Away</h2>
+      <%= form_tag(send_marble_path, :method => :post) do %>
+        <p> Recipient's Username: </p>
+        <div class = "user_input">
+          <%= text_field_tag('username') %><br>
+        </div>
+        <input type="submit" value="Submit">
+      <% end %>
+    <% end %>
+  </div>
 
+  <% current_user.marbles.times do %>
+    <%= image_tag("firstmarble.jpg", :class => "marble", :align => "middle") %>
   <% end %>
 </div>
-
-<% current_user.marbles.times do %>
-  <%= image_tag("firstmarble.jpg", :class => "marble", :align => "middle") %>
-<% end %>
