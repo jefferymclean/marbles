@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>
-    My Marbles
-  </title>
-</head>
-<body>
-  <h2 id="user-title">Your Marbles</h2>
+<h2 id="user-title">Your Marbles</h2>
 
 <div id="giveaway">  
   <h2>Give one of your <%= current_user.marbles %> Marbles Away</h2>
@@ -14,16 +6,17 @@
     <p> Recipient's Username: </p>
     <%= text_field_tag('username') %><br>
     <input type="submit" value="Submit">
-  </form>
+
+  <% end %>
 </div>
 
-  <div id="container">
-    <div id="jar">
-      <div id="firstmarble">
-      </div>
+<% current_user.marbles.times do %>
+  <%= image_tag("firstmarble.jpg", :class => "marble") %>
+<% end %>
+
+<div id="container">
+  <div id="jar">
+    <div id="firstmarble">
     </div>
   </div>
-
-</body>
-</html>
-<% end %>
+</div>
