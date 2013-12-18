@@ -1,7 +1,7 @@
-<h2 id="user-title">Your Marbles</h2>
+<h2 id="user-title"></h2>
 
-<div id="giveaway">  
-  <h2>Give one of your <%= current_user.marbles %> Marbles Away</h2>
+<div id="giveaway"> 
+  <h2>Give One of Your <%= current_user.marbles.to_words.capitalize %> Marbles Away</h2>
   <%= form_tag(send_marble_path, :method => :post) do %>
     <p> Recipient's Username: </p>
     <%= text_field_tag('username') %><br>
@@ -11,12 +11,5 @@
 </div>
 
 <% current_user.marbles.times do %>
-  <%= image_tag("firstmarble.jpg", :class => "marble") %>
+  <%= image_tag("firstmarble.jpg", :class => "marble", :align => "middle") %>
 <% end %>
-
-<div id="container">
-  <div id="jar">
-    <div id="firstmarble">
-    </div>
-  </div>
-</div>
