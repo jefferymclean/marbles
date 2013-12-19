@@ -49,7 +49,7 @@ img {
   border-style: solid;
   border-radius: 10%; 
   box-shadow: 5px 5px 5px #888888;
-  width: 30%; 
+  width: 27%; 
   padding-bottom: 10px; 
   margin-bottom: 10px; 
   margin-top: 80px; 
@@ -60,16 +60,36 @@ img {
 }
 
 .marble {
-  height: 15%; 
-  width: 15%; 
+  height: 20%; 
+  width: 20%; 
+  position: absolute; 
 
-  &:nth-child(1) {
+  &:nth-of-type(1) {
     position: absolute; 
-    top: 90px; 
-    left: 40px;
+    top: 330px; 
+    left: 75px;
   }  
+  &:nth-of-type(2) {
+    position: absolute; 
+    top: 330px; 
+    left: 170px;
+  }
+  &:nth-of-type(3) {
+    position: absolute; 
+    top: 330px; 
+    left: 265px;
+  }   
+  &:nth-of-type(4) {
+    position: absolute; 
+    top: 235px; 
+    left: 75px;
+  }
+  &:nth-of-type(5) {
+    position: absolute; 
+    top: 400px; 
+    left: 500px;
+  }      
 }
-
 .mainpagebg {
   margin-top: 15px; 
   background-image: asset-url("thismarbles.jpg", image); 
@@ -99,9 +119,12 @@ img {
 .jar {
   background-image: asset-url("jar.jpg", image); 
   background-repeat: no-repeat;
-  background-position: center; 
-  background-size: 55%, 55%; 
-  width: 100%;
-  height: 100%; 
+  background-position: 0px 0px; 
+  background-size: 100%; 
+  width: 450px;
+  height: 450px;
   position: relative; 
+  margin: auto auto; 
+  margin-top: 40px; 
+
 }
